@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light" />
+    <meta name="theme-color" content="#F4EEE4" />
+
+    <title>SNW — Développeur web &amp; développeur de bots Discord</title>
+    <meta
+      name="description"
+      content="Portfolio de snw : conception et développement de sites web et de bots Discord. Étude de cas Atome, bot ticket-plus, démarche de fabrication et contact."
+    />
+    <meta name="author" content="snw" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Partage social. Passer og:image et og:url en URL absolue après la mise en ligne (voir README). -->
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:site_name" content="SNW — Édition 01" />
+    <meta property="og:title" content="SNW — Développeur web &amp; développeur de bots Discord" />
+    <meta
+      property="og:description"
+      content="Étude de cas Atome, bot Discord ticket-plus, journal de fabrication. Un portfolio conçu comme un numéro : papier ivoire, encre, un seul accent rouge orangé."
+    />
+    <meta property="og:image" content="/og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Le mot snw composé en très grand sur fond ivoire." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="SNW — Développeur web &amp; développeur de bots Discord" />
+    <meta
+      name="twitter:description"
+      content="Étude de cas Atome, bot Discord ticket-plus, journal de fabrication."
+    />
+    <meta name="twitter:image" content="/og.png" />
+
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+    <style>
+      /* Couleur de page dès le premier octet : aucun flash blanc, même sans CSS. */
+      html {
+        background: #f4eee4;
+        color: #17140f;
+      }
+
+      /* Amorce peinte avant l'hydratation : la couverture s'installe sans saut. */
+      .boot {
+        font-family: ui-monospace, 'SFMono-Regular', Menlo, monospace;
+        font-size: clamp(0.68rem, 0.74vw, 0.78rem);
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: #3c352b;
+        padding: clamp(1rem, 3vw, 2.2rem) clamp(1.1rem, 4.4vw, 5.25rem) 0;
+      }
+
+      .boot__mark {
+        font-family: system-ui, sans-serif;
+        font-weight: 800;
+        font-size: 0.95rem;
+        letter-spacing: 0.02em;
+        color: #17140f;
+        border-bottom: 1px solid rgba(23, 20, 15, 0.34);
+        padding-bottom: 0.75rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 0.3rem 1.2rem;
+      }
+
+      .boot__role,
+      .boot__meta {
+        margin-top: 0.45rem;
+      }
+
+      /* Repli sans JavaScript : la même voix, l'essentiel, des liens qui marchent. */
+      .nojs {
+        padding: clamp(2rem, 6vw, 4.5rem) clamp(1.1rem, 4.4vw, 5.25rem);
+        font-family: Georgia, 'Times New Roman', serif;
+        font-size: 1.05rem;
+        line-height: 1.55;
+        max-width: 46rem;
+      }
+
+      .nojs__kicker {
+        font-family: ui-monospace, Menlo, monospace;
+        font-size: 0.72rem;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: #c9380f;
+      }
+
+      .nojs h1 {
+        font-family: system-ui, sans-serif;
+        font-weight: 800;
+        font-size: clamp(1.6rem, 5vw, 2.4rem);
+        letter-spacing: -0.03em;
+        line-height: 1.05;
+        text-transform: uppercase;
+        margin: 0.6rem 0 1rem;
+      }
+
+      .nojs ul {
+        list-style: none;
+        padding: 0;
+        margin: 1.2rem 0 0;
+        border-top: 1px solid rgba(23, 20, 15, 0.34);
+      }
+
+      .nojs li {
+        padding: 0.6rem 0;
+        border-bottom: 1px solid rgba(23, 20, 15, 0.16);
+      }
+
+      .nojs a {
+        color: #c9380f;
+        text-decoration: underline;
+      }
+
+      .nojs__note {
+        font-family: ui-monospace, Menlo, monospace;
+        font-size: 0.72rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: #6f6459;
+        margin-top: 1.2rem;
+      }
+    </style>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "snw",
+        "alternateName": "Snowoo-2z",
+        "jobTitle": ["Développeur web", "Développeur de bots Discord"],
+        "sameAs": ["https://github.com/Snowoo-2z"],
+        "knowsAbout": ["Développement web", "Bots Discord", "Conception d'interfaces", "TypeScript", "discord.js"],
+        "workExample": [
+          {
+            "@type": "WebSite",
+            "name": "Atome",
+            "url": "https://atome-a401.onrender.com/",
+            "description": "Site de la marque de vêtements Atome : collection, pièces, communauté."
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root">
+      <!-- Peinture immédiate, remplacée par l'application dès qu'elle est prête. -->
+      <div class="boot" aria-hidden="true">
+        <p class="boot__mark"><span>SNW</span><span>Édition 01 — octobre 2026</span></p>
+        <p class="boot__role">Développeur web &amp; développeur de bots Discord</p>
+        <p class="boot__meta">Chargement du numéro…</p>
+      </div>
+
+      <!-- Sans JavaScript : l'essentiel reste lisible, sans mise en page cassée. -->
+      <noscript>
+        <div class="nojs">
+          <p class="nojs__kicker">Édition 01 — version sans JavaScript</p>
+          <h1>SNW — développeur web &amp; développeur de bots Discord</h1>
+          <p>
+            La version complète de ce portfolio se parcourt avec JavaScript activé : la
+            couverture y met le pseudo en scène comme une épreuve typographique, et chaque
+            chapitre est annoté. En voici l’essentiel.
+          </p>
+          <ul>
+            <li>
+              <strong>Atome</strong> — site d’une marque de vêtements : accueil, collection,
+              communauté. <a href="https://atome-a401.onrender.com/">atome-a401.onrender.com</a>
+            </li>
+            <li>
+              <strong>ticket-plus</strong> — bot Discord de gestion de tickets : panneaux,
+              permissions par salon, journaux, transcriptions.
+              <a href="https://github.com/Snowoo-2z/ticket-plus">github.com/Snowoo-2z/ticket-plus</a>
+            </li>
+            <li>
+              <strong>Astra OS</strong> — système d’exploitation x86 écrit de zéro (chantier
+              ouvert). <a href="https://github.com/Snowoo-2z/AstraOS">github.com/Snowoo-2z/AstraOS</a>
+            </li>
+            <li><strong>Discord</strong> — snw_code · <strong>GitHub</strong> — @Snowoo-2z</li>
+          </ul>
+          <p class="nojs__note">
+            Aucun contenu de cette page n’est inventé : tout provient du site en ligne, des
+            dépôts publics ou de l’auteur.
+          </p>
+        </div>
+      </noscript>
+    </div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

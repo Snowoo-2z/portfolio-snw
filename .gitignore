@@ -1,0 +1,11 @@
+node_modules/
+dist/
+.vite/
+*.log
+
+# Zone de travail locale : originaux d'images (voir README)
+assets/
+
+.DS_Store
+.idea/
+.vscode/

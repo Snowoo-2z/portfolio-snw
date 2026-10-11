@@ -1,0 +1,116 @@
+{
+  "atome": {
+    "hero": [
+      {
+        "src": "/media/atome/hero-1600.avif",
+        "width": 1254,
+        "height": 1254,
+        "ratio": 1,
+        "bytes": 75967
+      },
+      {
+        "src": "/media/atome/hero-1600.webp",
+        "width": 1254,
+        "height": 1254,
+        "ratio": 1,
+        "bytes": 53884
+      },
+      {
+        "src": "/media/atome/hero-900.avif",
+        "width": 900,
+        "height": 900,
+        "ratio": 1,
+        "bytes": 46227
+      },
+      {
+        "src": "/media/atome/hero-900.webp",
+        "width": 900,
+        "height": 900,
+        "ratio": 1,
+        "bytes": 35878
+      },
+      {
+        "src": "/media/atome/hero-520.avif",
+        "width": 520,
+        "height": 520,
+        "ratio": 1,
+        "bytes": 20555
+      },
+      {
+        "src": "/media/atome/hero-520.webp",
+        "width": 520,
+        "height": 520,
+        "ratio": 1,
+        "bytes": 17428
+      }
+    ],
+    "flat": [
+      {
+        "src": "/media/atome/flat-900.avif",
+        "width": 900,
+        "height": 900,
+        "ratio": 1,
+        "bytes": 51551
+      },
+      {
+        "src": "/media/atome/flat-900.webp",
+        "width": 900,
+        "height": 900,
+        "ratio": 1,
+        "bytes": 48320
+      },
+      {
+        "src": "/media/atome/flat-520.avif",
+        "width": 520,
+        "height": 520,
+        "ratio": 1,
+        "bytes": 21511
+      },
+      {
+        "src": "/media/atome/flat-520.webp",
+        "width": 520,
+        "height": 520,
+        "ratio": 1,
+        "bytes": 22184
+      }
+    ],
+    "logo": [
+      {
+        "src": "/media/atome/logo-640.avif",
+        "width": 640,
+        "height": 640,
+        "ratio": 1,
+        "bytes": 8708
+      },
+      {
+        "src": "/media/atome/logo-640.webp",
+        "width": 640,
+        "height": 640,
+        "ratio": 1,
+        "bytes": 10460
+      }
+    ],
+    "detailPrint": [
+      {
+        "src": "/media/atome/detail-print-900.avif",
+        "width": 900,
+        "height": 900,
+        "ratio": 1,
+        "bytes": 53979
+      },
+      {
+        "src": "/media/atome/detail-print-900.webp",
+        "width": 900,
+        "height": 900,
+        "ratio": 1,
+        "bytes": 45992
+      }
+    ],
+    "detailLogo": null,
+    "siteCapture": null
+  },
+  "ticketPlus": {
+    "shots": []
+  },
+  "generatedAt": "2026-10-11T12:01:47.695Z"
+}
