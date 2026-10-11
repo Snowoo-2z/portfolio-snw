@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+# Aucun plan de site n'est publié : une seule page, indexable telle quelle.
