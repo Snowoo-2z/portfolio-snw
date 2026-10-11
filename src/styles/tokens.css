@@ -1,0 +1,96 @@
+/* ==========================================================================
+   SNW — Jetons de composition
+   Un seul endroit décide de tout : papier, encre, accent, grille, échelles.
+   ========================================================================== */
+
+:root {
+  /* Papier & encre ------------------------------------------------------- */
+  --paper: #f4eee4;
+  --paper-shade: #ebe2d4;
+  --ink: #17140f;
+  --ink-soft: #3c352b;
+  --ink-mute: #6f6459;
+
+  /* Filets : trois épaisseurs, jamais plus. */
+  --rule: rgba(23, 20, 15, 0.16);
+  --rule-mid: rgba(23, 20, 15, 0.34);
+  --rule-strong: rgba(23, 20, 15, 0.62);
+
+  /* Rouge orangé : annotation, marque, signal. Rien d'autre. */
+  --accent: #c9380f;
+  --accent-soft: rgba(201, 56, 15, 0.14);
+  --accent-deep: #8e2408;
+
+  /* Encres de la nuit (cahier Atome) */
+  --void: #0c0b09;
+  --void-ink: #f2ece2;
+
+  /* Voix typographiques -------------------------------------------------- */
+  --f-title: 'Archivo Variable', Archivo, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --f-text: 'Newsreader Variable', Newsreader, Georgia, 'Times New Roman', serif;
+  --f-mono: 'IBM Plex Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace;
+
+  /* Grille & rythme ------------------------------------------------------ */
+  --margin: clamp(1.1rem, 4.4vw, 5.25rem);
+  --gutter: clamp(0.7rem, 1.5vw, 1.6rem);
+  --maxw: 1680px;
+  --rail: 4.25rem;
+  --baseline: 8px;
+  --measure: 64ch;
+
+  /* Échelles fluides ----------------------------------------------------- */
+  --t-display: clamp(3.4rem, 13vw, 13rem);
+  --t-title: clamp(2.1rem, 5.4vw, 5rem);
+  --t-sub: clamp(1.5rem, 3.4vw, 2.6rem);
+  --t-deck: clamp(1.16rem, 2.05vw, 1.72rem);
+  --t-body: clamp(1.02rem, 1.06vw, 1.14rem);
+  --t-note: clamp(0.76rem, 0.83vw, 0.84rem);
+  --t-mono: clamp(0.68rem, 0.74vw, 0.78rem);
+
+  /* Mouvement ------------------------------------------------------------ */
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-io: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur: 520ms;
+}
+
+/* Le cahier noir invertit le papier et l'encre : tous les composants suivent. */
+[data-skin='void'] {
+  --paper: var(--void);
+  --paper-shade: #14120f;
+  --ink: var(--void-ink);
+  --ink-soft: #cec6b9;
+  --ink-mute: rgba(242, 236, 226, 0.66);
+  --rule: rgba(242, 236, 226, 0.2);
+  --rule-mid: rgba(242, 236, 226, 0.38);
+  --rule-strong: rgba(242, 236, 226, 0.72);
+  --accent: #ef6d3b;
+  --accent-soft: rgba(239, 109, 59, 0.18);
+  --accent-deep: #ff8f63;
+  color-scheme: dark;
+}
+
+[data-skin='paper'] {
+  --paper: #f4eee4;
+  --paper-shade: #ebe2d4;
+  --ink: #17140f;
+  --ink-soft: #3c352b;
+  --ink-mute: #6f6459;
+  --rule: rgba(23, 20, 15, 0.16);
+  --rule-mid: rgba(23, 20, 15, 0.34);
+  --rule-strong: rgba(23, 20, 15, 0.62);
+  --accent: #c9380f;
+  --accent-soft: rgba(201, 56, 15, 0.14);
+  --accent-deep: #8e2408;
+  color-scheme: light;
+}
+
+/* Animations coupées : par préférence système ou par choix explicite. */
+[data-motion='off'] {
+  --dur: 0ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --dur: 0ms;
+  }
+}

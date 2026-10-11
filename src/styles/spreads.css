@@ -1,0 +1,641 @@
+/* ==========================================================================
+   Cahiers : l'étude de cas Atome (fond noir) et la planche ticket-plus
+   ========================================================================== */
+
+/* ------------------------------------------------------------------- Atome  */
+
+.atome {
+  position: relative;
+  background: var(--paper);
+  color: var(--ink);
+  border-top: 1px solid var(--ink);
+}
+
+.atome__band {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding-block: 0.7rem;
+  border-bottom: 1px solid var(--rule);
+  font-family: var(--f-mono);
+  font-size: var(--t-mono);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ink-mute);
+}
+
+.atome__band b {
+  color: var(--accent);
+  font-weight: 500;
+}
+
+.atome__band-line {
+  flex: 1;
+  height: 1px;
+  background: var(--rule);
+}
+
+.atome__head {
+  padding-block: clamp(2rem, 5vw, 3.6rem);
+  row-gap: 1.4rem;
+}
+
+.atome__title {
+  font-family: var(--f-title);
+  font-weight: 800;
+  font-size: clamp(3.4rem, 13vw, 12rem);
+  line-height: 0.82;
+  letter-spacing: -0.045em;
+  text-transform: uppercase;
+}
+
+.atome__type {
+  display: block;
+  font-family: var(--f-mono);
+  font-size: var(--t-mono);
+  line-height: 1.5;
+  letter-spacing: 0.2em;
+  color: var(--accent);
+  margin-top: 0.9rem;
+}
+
+.atome__fiche {
+  align-self: start;
+}
+
+@media (min-width: 1080px) {
+  .atome__fiche {
+    position: sticky;
+    top: 2.5rem;
+  }
+}
+
+.atome__plate {
+  margin-block: clamp(1.5rem, 4vw, 2.5rem) clamp(2rem, 5vw, 3.5rem);
+}
+
+.atome__body {
+  row-gap: clamp(1.6rem, 4vw, 2.6rem);
+}
+
+.atome__list {
+  display: flex;
+  flex-direction: column;
+  counter-reset: atome-item;
+}
+
+.atome__item {
+  display: grid;
+  grid-template-columns: 2rem minmax(0, 1fr);
+  gap: 0.8rem;
+  padding-block: 0.9rem;
+  border-top: 1px solid var(--rule);
+}
+
+.atome__item:last-child {
+  border-bottom: 1px solid var(--rule);
+}
+
+.atome__item::before {
+  counter-increment: atome-item;
+  content: counter(atome-item, decimal-leading-zero);
+  font-family: var(--f-mono);
+  font-size: var(--t-mono);
+  letter-spacing: 0.1em;
+  color: var(--accent);
+  padding-top: 0.25rem;
+}
+
+.atome__item h3 {
+  font-size: 1.12rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin-bottom: 0.25rem;
+}
+
+.atome__item p {
+  color: var(--ink-soft);
+  font-size: 0.98rem;
+  line-height: 1.5;
+}
+
+.atome__plates {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1.2rem, 3vw, 2rem);
+}
+
+.atome__brand {
+  padding-block: clamp(1.5rem, 4vw, 2.4rem);
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+  row-gap: 1.4rem;
+  align-items: start;
+}
+
+.atome__mark {
+  background: var(--paper-shade);
+  border: 1px solid var(--rule);
+  padding: 1rem;
+}
+
+.atome__mark img {
+  width: 100%;
+}
+
+.atome__quote {
+  font-family: var(--f-title);
+  font-weight: 800;
+  font-size: clamp(1.35rem, 3.1vw, 2.3rem);
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.atome__quote small {
+  display: block;
+  font-family: var(--f-mono);
+  font-size: var(--t-mono);
+  font-weight: 400;
+  letter-spacing: 0.14em;
+  color: var(--ink-mute);
+  text-transform: uppercase;
+  margin-top: 0.6rem;
+}
+
+.atome__sources {
+  border: 1px dashed var(--rule-mid);
+  padding: 0.9rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.atome__sources li {
+  font-family: var(--f-mono);
+  font-size: var(--t-note);
+  letter-spacing: 0.02em;
+  color: var(--ink-mute);
+  line-height: 1.5;
+  display: grid;
+  grid-template-columns: 1rem 1fr;
+  gap: 0.4rem;
+}
+
+.atome__sources li::before {
+  content: '↳';
+  color: var(--accent);
+}
+
+.atome__actions {
+  padding-top: clamp(1.4rem, 3.5vw, 2.2rem);
+  row-gap: 1rem;
+  align-items: end;
+}
+
+/* -------------------------------------------------------- planche ticket-plus */
+
+.planche {
+  row-gap: clamp(1.4rem, 3.5vw, 2.4rem);
+}
+
+.planche__step {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  position: relative;
+}
+
+.planche__step-head {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+  border-bottom: 1px solid var(--rule-mid);
+  padding-bottom: 0.5rem;
+}
+
+.planche__step-id {
+  font-family: var(--f-mono);
+  font-size: var(--t-mono);
+  letter-spacing: 0.12em;
+  color: var(--accent);
+}
+
+.planche__step-name {
+  font-family: var(--f-mono);
+  font-size: var(--t-mono);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+
+.planche__step-where {
+  margin-left: auto;
+  font-family: var(--f-mono);
+  font-size: var(--t-mono);
+  letter-spacing: 0.06em;
+  color: var(--ink-mute);
+  text-align: right;
+}
+
+/* Maquette abstraite : des blocs, des filets, jamais de fausse interface. */
+.mock {
+  border: 1px solid var(--rule-strong);
+  padding: 0.9rem 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  background: var(--paper-shade);
+}
+
+.mock__bar {
+  height: 3px;
+  width: 2.6rem;
+  background: var(--accent);
+}
+
+.mock__title,
+.mock__desc,
+.mock__footer,
+.mock__field {
+  font-family: var(--f-mono);
+  font-size: var(--t-mono);
+  line-height: 1.5;
+}
+
+.mock__title {
+  font-family: var(--f-title);
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+}
+
+.mock__desc {
+  color: var(--ink-mute);
+  letter-spacing: 0.02em;
+}
+
+.mock__fields {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.4rem;
+  border-top: 1px solid var(--rule);
+  padding-top: 0.55rem;
+}
+
+.mock__field {
+  letter-spacing: 0.04em;
+  color: var(--ink-soft);
+}
+
+.mock__field b {
+  display: block;
+  font-weight: 400;
+  color: var(--ink-mute);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.9em;
+}
+
+.mock__footer {
+  color: var(--ink-mute);
+  letter-spacing: 0.06em;
+  border-top: 1px solid var(--rule);
+  padding-top: 0.5rem;
+}
+
+.mock__row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.mock__btn {
+  font-family: var(--f-mono);
+  font-size: var(--t-mono);
+  letter-spacing: 0.06em;
+  border: 1px solid var(--rule-strong);
+  padding: 0.3rem 0.55rem;
+  color: var(--ink);
+  background: var(--paper);
+}
+
+.mock__btn--signal {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.mock__menu {
+  border: 1px solid var(--rule-strong);
+  background: var(--paper);
+  padding: 0.35rem 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.mock__menu-item {
+  font-family: var(--f-mono);
+  font-size: var(--t-mono);
+  letter-spacing: 0.04em;
+  color: var(--ink-soft);
+  padding: 0.3rem 0.7rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+.mock__menu-item:last-child {
+  border-bottom: 0;
+}
+
+.mock__menu-item--disabled {
+  color: var(--ink-mute);
+}
+
+.mock__state {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  font-family: var(--f-mono);
+  font-size: var(--t-mono);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+.mock__state span {
+  width: 0.5rem;
+  height: 0.5rem;
+  background: var(--accent);
+}
+
+/* Flèche de liaison entre deux états du schéma. */
+.planche__arrow {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--f-mono);
+  font-size: var(--t-mono);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.planche__arrow::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--rule-mid);
+}
+
+/* Journal et transcription : deux encadrés côte à côte. */
+.planche__annex {
+  margin-top: clamp(1.4rem, 3.5vw, 2.2rem);
+  row-gap: 1.4rem;
+}
+
+.planche__annex .mock {
+  height: 100%;
+}
+
+.log-line {
+  display: grid;
+  grid-template-columns: 0.9rem minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 0.6rem;
+  padding-block: 0.4rem;
+  border-top: 1px solid var(--rule);
+  font-family: var(--f-mono);
+  font-size: var(--t-mono);
+  letter-spacing: 0.03em;
+  color: var(--ink-soft);
+}
+
+.log-line:first-of-type {
+  border-top: 0;
+}
+
+.log-line__swatch {
+  width: 0.7rem;
+  height: 0.7rem;
+  border: 1px solid var(--rule-mid);
+}
+
+.log-line__hex {
+  color: var(--ink-mute);
+}
+
+/* Relevé de faits : les chiffres du dépôt, rien de plus. */
+.releve {
+  border: 1px solid var(--rule-mid);
+  padding: 1rem 1.1rem 1.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.releve__head {
+  font-family: var(--f-mono);
+  font-size: var(--t-mono);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 0.5rem;
+}
+
+.releve__list {
+  display: flex;
+  flex-direction: column;
+}
+
+.releve__row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-block: 0.32rem;
+  border-bottom: 1px solid var(--rule);
+  font-family: var(--f-mono);
+  font-size: var(--t-note);
+  letter-spacing: 0.02em;
+  color: var(--ink-mute);
+}
+
+.releve__row:last-child {
+  border-bottom: 0;
+}
+
+.releve__row b {
+  color: var(--ink);
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.releve__source {
+  font-family: var(--f-mono);
+  font-size: var(--t-mono);
+  letter-spacing: 0.06em;
+  color: var(--ink-mute);
+  text-transform: uppercase;
+}
+
+/* Mécanismes : liste réglée sur deux colonnes. */
+.mech {
+  display: flex;
+  flex-direction: column;
+}
+
+.mech__item {
+  display: grid;
+  grid-template-columns: 1.6rem minmax(0, 1fr);
+  gap: 0.7rem;
+  padding-block: 0.75rem;
+  border-top: 1px solid var(--rule);
+}
+
+.mech__item::before {
+  content: '§';
+  font-family: var(--f-mono);
+  font-size: var(--t-mono);
+  color: var(--accent);
+  padding-top: 0.15rem;
+}
+
+.mech__item h4 {
+  font-family: var(--f-mono);
+  font-size: var(--t-note);
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 0.3rem;
+}
+
+.mech__item p {
+  font-size: 0.96rem;
+  line-height: 1.5;
+  color: var(--ink-soft);
+}
+
+.mech__item code {
+  font-family: var(--f-mono);
+  font-size: 0.86em;
+  background: color-mix(in srgb, var(--ink) 7%, transparent);
+  padding: 0.05rem 0.25rem;
+}
+
+/* Captures du bot : emplacements en attente. */
+.shots {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--gutter);
+}
+
+@media (min-width: 760px) {
+  .shots {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.shots__empty {
+  border: 1px dashed var(--rule-mid);
+  padding: clamp(1.6rem, 6vw, 3rem) 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  align-items: flex-start;
+}
+
+.shots__empty b {
+  font-family: var(--f-title);
+  font-weight: 800;
+  font-size: 1rem;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+}
+
+.shots__empty span {
+  font-family: var(--f-mono);
+  font-size: var(--t-mono);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-mute);
+}
+
+.chantiers {
+  border-top: 1px solid var(--rule-strong);
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.chantiers__item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.5rem 0.9rem;
+  font-family: var(--f-mono);
+  font-size: var(--t-note);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+.chantiers__item b {
+  font-weight: 500;
+  color: var(--ink);
+  font-family: var(--f-title);
+  font-size: 1rem;
+  letter-spacing: -0.01em;
+  text-transform: none;
+}
+
+.chantiers__item span {
+  color: var(--ink-mute);
+}
+
+/* Les visuels du projet sont noirs : un filet les détache de l'encre. */
+.atome .plate-figure__frame {
+  border-color: rgba(242, 236, 226, 0.22);
+  background: #100e0c;
+}
+
+/* Encart papier dans le cahier noir : les planches d'images.
+   Le fond clair est nécessaire — les visuels du projet sont noirs. */
+.atome__insert {
+  margin-top: clamp(2rem, 5vw, 3.5rem);
+  padding-block: clamp(2rem, 5vw, 3.5rem);
+  border-top: 1px solid var(--ink);
+  border-bottom: 1px solid var(--ink);
+}
+
+.atome__insert-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.5rem 1.2rem;
+  border-bottom: 1px solid var(--rule-mid);
+  padding-bottom: 0.8rem;
+  margin-bottom: clamp(1.4rem, 3.5vw, 2.4rem);
+}
+
+.atome__insert-title {
+  font-family: var(--f-head, var(--f-title));
+  font-weight: 700;
+  font-size: clamp(1.1rem, 2vw, 1.5rem);
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+}
+
+.atome__insert-note {
+  margin-left: auto;
+  max-width: 46ch;
+}
+
+.atome__plates-insert {
+  row-gap: clamp(1.4rem, 3.5vw, 2.4rem);
+}
+
+.atome__detail {
+  margin-top: clamp(1.4rem, 3.5vw, 2.4rem);
+}
